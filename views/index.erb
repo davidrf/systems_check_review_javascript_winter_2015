@@ -1,0 +1,15 @@
+<h1>Question Queue</h1>
+
+<ul id="questions">
+  <% @questions.each do |question| %>
+    <li class="question">
+      <%= question['title'] %>
+    </li>
+  <% end %>
+</ul>
+
+<form method="post" action="/questions">
+  <label for="question_title">Title</label>
+  <input type="text" name="title" id="question_title">
+  <input type="submit" value="Add">
+</form>
